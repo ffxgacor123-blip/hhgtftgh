@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temukan game favoritmu di GAMINGRDW.ID">
+  <title>GAMINGRDW.ID - Download Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="GAMINGRDW.ID Beranda">
+      <span class="brand-icon">🎮</span><span>GAMING<span class="red">RDW.ID</span></span>
+    </a>
+    <nav class="main-nav">
+      <a class="nav-link active" href="#beranda">⌂ <span>Beranda</span></a>
+      <a class="nav-link" href="#games">🎮 <span>Game</span></a>
+    </nav>
+    <form class="search" id="searchForm">
+      <input id="searchInput" type="search" placeholder="Cari game..." autocomplete="off" aria-label="Cari game">
+      <button type="submit" aria-label="Cari">⌕</button>
+    </form>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda" aria-label="Banner promosi">
+      <img id="heroImage" src="assets/banner.jpg" alt="Banner GAMINGRDW.ID">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">DOWNLOAD GAME GRATIS</p>
+        <h1>GAMING<span>RDW.ID</span></h1>
+        <p>Download game terbaru, mudah dan cepat!<br> Mainkan game favoritmu sekarang juga.</p>
+      </div>
+      <div class="slider-dots" id="sliderDots" aria-label="Pilih banner">
+        <button class="dot selected" data-slide="0" aria-label="Banner 1"></button>
+        <button class="dot" data-slide="1" aria-label="Banner 2"></button>
+        <button class="dot" data-slide="2" aria-label="Banner 3"></button>
+      </div>
+    </section>
+
+    <section class="games-section" id="games">
+      <div class="section-heading">
+        <h2><span></span>Game <b>Populer</b></h2>
+        <button class="see-all" id="seeAllBtn" type="button">Lihat Semua Game <span>➜</span></button>
+      </div>
+      <div class="game-grid" id="gameGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>Game tidak ditemukan. Coba kata kunci lain.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 <b>GAMINGRDW.ID</b> — Website katalog game.</footer>
+
+  <div class="modal-backdrop" id="detailModal" hidden>
+    <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <button class="close-modal" id="closeModal" aria-label="Tutup">×</button>
+      <img id="detailImage" class="detail-image" src="" alt="">
+      <div class="detail-content">
+        <p class="eyebrow">DETAIL GAME</p>
+        <h2 id="detailTitle"></h2>
+        <p id="detailDescription" class="detail-description"></p>
+        <div class="detail-table">
+          <div><span>Ukuran</span><strong id="detailSize"></strong></div>
+          <div><span>Platform</span><strong id="detailPlatform"></strong></div>
+          <div><span>Versi</span><strong id="detailVersion"></strong></div>
+          <div><span>Kategori</span><strong id="detailCategory"></strong></div>
+        </div>
+        <a id="downloadLink" class="download-button detail-download" href="#" target="_blank" rel="noopener noreferrer">⬇ Download Game</a>
+        <p class="download-note">Pastikan spesifikasi perangkatmu sesuai sebelum mengunduh.</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
